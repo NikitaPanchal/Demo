@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gtQ-Ku-N6I">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TJq-sK-fDF">
+                                <rect key="frame" x="0.0" y="21" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Niki's Kitchen" id="FiT-OO-L5i">
+                                        <barButtonItem key="leftBarButtonItem" title="Menu" id="25f-Bs-KLn">
+                                            <connections>
+                                                <action selector="Click:" destination="BYZ-38-t0r" id="vHn-lC-cpz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="6bj-RT-JUh"/>
+                                </connections>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SC9-0S-Mf8"/>
+                    <connections>
+                        <outlet property="Title_nav" destination="FiT-OO-L5i" id="q9e-Wy-kT5"/>
+                        <outlet property="navBar" destination="TJq-sK-fDF" id="TF5-Y2-o9p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="170"/>
+        </scene>
+        <!--Gujju snacks-->
+        <scene sceneID="FRh-yS-UZr">
+            <objects>
+                <viewController storyboardIdentifier="GS" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uhc-Hg-ZWx" customClass="Gujju_snacks" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BQS-Wl-Syh"/>
+                        <viewControllerLayoutGuide type="bottom" id="mAn-0t-9xd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yy3-JM-Pdg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VT7-8V-puW">
+                                <rect key="frame" x="0.0" y="17" width="320" height="44"/>
+                                <color key="barTintColor" red="0.86666666670000003" green="0.73725490199999999" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Snacks Menu" id="pcN-Mk-Nl2">
+                                        <barButtonItem key="leftBarButtonItem" image="backbtn.png" id="RAa-dn-gOD">
+                                            <color key="tintColor" red="0.16078431369999999" green="0.36862745099999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="Action_back:" destination="uhc-Hg-ZWx" id="VDu-UZ-duW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QEF-Pw-2Eu">
+                                <rect key="frame" x="0.0" y="36" width="320" height="532"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uhc-Hg-ZWx" id="7hd-M3-F0z"/>
+                                    <outlet property="delegate" destination="uhc-Hg-ZWx" id="fFS-OO-VG8"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fn7-k7-f5r"/>
+                    <connections>
+                        <outlet property="navBar" destination="VT7-8V-puW" id="BXk-Kc-Odu"/>
+                        <outlet property="tblview" destination="QEF-Pw-2Eu" id="aBt-uw-GyQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONW-iE-Z1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098" y="-484"/>
+        </scene>
+        <!--Recipe1-->
+        <scene sceneID="X0b-Dk-9R3">
+            <objects>
+                <viewController storyboardIdentifier="RP1" id="QBf-cb-v4T" customClass="Recipe1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="coX-ch-sfB"/>
+                        <viewControllerLayoutGuide type="bottom" id="xZN-P7-OaA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pop-ru-4S4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p5R-oy-9v9">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.73725490199999999" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.86666666670000003" green="0.73725490199999999" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Farsi Puri" id="5hb-HF-Eek">
+                                        <barButtonItem key="leftBarButtonItem" image="backbtn.png" id="Gsm-Q6-tSv">
+                                            <color key="tintColor" red="0.16078431369999999" green="0.36862745099999999" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="Action_back:" destination="QBf-cb-v4T" id="qzO-C8-PLB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ED4-Oi-1Lh">
+                                <rect key="frame" x="0.0" y="224" width="320" height="344"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Me0-7R-APA">
+                                <rect key="frame" x="40" y="75" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgview" destination="Me0-7R-APA" id="ZWc-Mj-hE5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2c6-Dv-j3n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2460" y="-490"/>
+        </scene>
+        <!--Side Menu Container View Controller-->
+        <scene sceneID="6yA-5z-15S">
+            <objects>
+                <viewController storyboardIdentifier="MFSideMenuContainerViewController" id="gtQ-Ku-N6I" customClass="MFSideMenuContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t7N-oU-Bdz"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jjk-YG-SpT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gEU-A2-bsJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2gH-QI-PVk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7f-lj-4IT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="955" y="-484"/>
+        </scene>
+        <!--Side Menu View Controller-->
+        <scene sceneID="9tE-Ar-vml">
+            <objects>
+                <tableViewController storyboardIdentifier="leftSideMenuViewController" id="jHT-Nx-E9r" customClass="SideMenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JN7-Fb-rhQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="jHT-Nx-E9r" id="LSe-uP-lxB"/>
+                            <outlet property="delegate" destination="jHT-Nx-E9r" id="VzY-xW-2w3"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MyQ-qa-Z7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325" y="-484"/>
+        </scene>
+        <!--Lunch-->
+        <scene sceneID="4hF-iI-qTM">
+            <objects>
+                <viewController storyboardIdentifier="GujratiLunch" id="tdI-Am-SZb" customClass="GujratiLunch" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tp1-6p-gSq"/>
+                        <viewControllerLayoutGuide type="bottom" id="JAg-0F-tU7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9EN-Wg-CjL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tvr-3I-fKK">
+                                <rect key="frame" x="0.0" y="21" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.73725490199999999" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.86666666670000003" green="0.73725490199999999" blue="0.58039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Title" id="dGx-PD-VsQ"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xnQ-vv-SMD">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tdI-Am-SZb" id="hch-Lr-KU4"/>
+                                    <outlet property="delegate" destination="tdI-Am-SZb" id="wko-6I-na9"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Lunch" id="1lv-pC-D1K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fud-fl-uM3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1859" y="157"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xKp-SW-8Hy">
+            <objects>
+                <navigationController storyboardIdentifier="navigationController" automaticallyAdjustsScrollViewInsets="NO" id="9pi-DA-tiu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hRg-iA-scQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Hfb-qw-ELE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9R1-Td-iuR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="157"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OVC-Vc-fpy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KCb-94-BG0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EqY-TO-ocx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uhc-Hg-ZWx" kind="relationship" relationship="rootViewController" id="hHT-aG-VDj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nmc-00-ATd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1715" y="-490"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rPC-CW-keF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y1G-Ai-vGv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dRj-pa-qWx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tdI-Am-SZb" kind="relationship" relationship="rootViewController" id="bii-24-K9k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nNr-2s-f3f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="157"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backbtn.png" width="40" height="40"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
